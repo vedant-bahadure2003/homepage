@@ -34,7 +34,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="w-[70%] mx-auto mt-14">
-        <h2 className="text-[#00008B] text-[24px] font-semibold ">
+        <h2 className="text-[#57462a] text-[24px] font-semibold ">
           Nashik City Police
         </h2>
         <div className=" mx-auto mt-12 grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
@@ -123,10 +123,10 @@ const Footer = () => {
       <div className="w-[70%] mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-xl text-gray-400">New Identity, New Presence</p>
         <div className="flex gap-4">
-          <button className="bg-[#00008B] text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
+          <button className="bg-[#57462a] text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
             ACCESSIBILITY COMPLIANT
           </button>
-          <button className="bg-[#00008B] text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
+          <button className="bg-[#57462a] text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
             CARBON COMPLIANT
           </button>
         </div>
@@ -139,13 +139,13 @@ const Footer = () => {
           <Link href="#">Sitemap</Link>
           <Link href="#">Disclaimer</Link>
         </div>
-        <div className="flex gap-4 items-center text-[#00008B] font-medium">
+        <div className="flex gap-4 items-center text-[#57462a] font-medium">
           <span>Visitor Count : 450601</span>
           <span className="flex items-center gap-1">
             <BsCalendar2Date /> Page updated : 5 August 2025
           </span>
         </div>
-        <div className="flex gap-4 text-[#00008B] text-lg">
+        <div className="flex gap-4 text-[#57462a] text-lg">
           <Link href="#">
             <Image src="/footer/twitter-x.png" alt="X" width={20} height={20} />
           </Link>

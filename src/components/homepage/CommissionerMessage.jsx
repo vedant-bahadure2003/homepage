@@ -22,7 +22,7 @@ const CommissionerMessage = () => {
           <p className="text-center text-gray-700 text-[16px] mt-4">
             Visiting hours [Without prior appointment]:
             <br />
-            <span className="text-[#12006c] text-[16px] font-medium">
+            <span className="text-[#57462a] text-[16px] font-medium">
               11:00 AM to 1:00 PM
             </span>
           </p>
@@ -35,7 +35,7 @@ const CommissionerMessage = () => {
           </h2>
 
           <div className="text-2xl text-gray-800 leading-relaxed relative pl-6">
-            <FaQuoteLeft className="text-[#12006c] absolute left-0 top-1 text-xl" />
+            <FaQuoteLeft className="text-[#57462a] absolute left-0 top-1 text-xl" />
             <p>
               Through citizen-centric policing, our primary goal is to deliver
               high-quality services to the specific needs and concerns of
@@ -53,7 +53,7 @@ const CommissionerMessage = () => {
             </p>
           </div>
 
-          <button className="mt-6 bg-[#12006c] hover:bg-[#0d0053] text-white px-6 py-3 rounded-xl font-semibold text-sm">
+          <button className="mt-6 bg-[#57462a] hover:bg-[#604f34] text-white px-6 py-3 rounded-xl font-semibold text-sm">
             Connect via E-Meet
           </button>
         </div>

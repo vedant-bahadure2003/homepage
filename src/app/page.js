@@ -7,6 +7,10 @@ import CommissionerMessage from "@/components/homepage/CommissionerMessage";
 import WhatsappSection from "@/components/homepage/WhatsappSection";
 import Kumbh from "@/components/homepage/Kumbh";
 import PoliceStationLocator from "@/components/homepage/PoliceStationLocator";
+import WhatsAppDashboard from "@/components/homepage/WhatsAppDashboard";
+import SecurityInitiative from "@/components/homepage/SecurityInitiative";
+import LatestActivities from "@/components/homepage/LatestActivities";
+import SocialMediaFeed from "@/components/homepage/SocialMediaFeed";
 export default function Home() {
   return (
     <>
@@ -17,7 +21,11 @@ export default function Home() {
       <ComplaintSection />
       <CommissionerMessage />
       <WhatsappSection />
+      <WhatsAppDashboard />
       <PoliceStationLocator />
+      <SecurityInitiative />
+      <LatestActivities />
+      <SocialMediaFeed />
       <Kumbh />
     </>
   );

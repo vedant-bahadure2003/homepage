@@ -26,11 +26,11 @@ const cards = [
 
 const ComplaintSection = () => {
   return (
-    <div className="bg-white w-full flex flex-col items-center px-6 py-12">
-      <h1 className="text-[48px]   text-black mb-2">
+    <div className="bg-white w-full flex flex-col items-center px-4 md:px-6 lg:px-12 py-12">
+      <h1 className="text-[28px] md:text-[36px] lg:text-[48px] text-black mb-2 text-center">
         Complaint, Information & Security - At One Click
       </h1>
-      <p className="text-gray-800  max-w-xl mb-8">
+      <p className="text-gray-800 max-w-xl text-center text-sm md:text-base mb-8">
         They perform many important tasks for the safety and order of society.
         Their responsibilities span across various sectors.
       </p>
@@ -40,38 +40,33 @@ const ComplaintSection = () => {
         <input
           type="text"
           placeholder="Search for Pay e-Challan, Missing Person, Download Forms, Unidentified Dead Bodies, FIR"
-          className="w-full px-5 py-3 rounded-full border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-5 py-3 rounded-full border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"
         />
-        <FaSearch className="absolute top-3 right-4 text-gray-500" />
+        <FaSearch className="absolute top-3.5 right-4 text-gray-500" />
       </div>
 
-      <div className="flex w-full max-w-5xl">
-        {/* Sidebar Menu */}
-        <div className="w-1/3   text-left space-y-2">
-          <div>
-            <h2 className="text-blue-700 text-[24px]  cursor-pointer">
-              Online Services & Forms ▾
-            </h2>
-          </div>
-          <div>
-            <h2 className="text-blue-700 text-[24px] cursor-pointer">
-              Popular Information ▾
-            </h2>
-          </div>
-          <div>
-            <h2 className="text-blue-700 text-[24px] cursor-pointer">
-              What’s New? ▾
-            </h2>
-          </div>
+      {/* Main Content: Sidebar + Cards */}
+      <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-8">
+        {/* Sidebar */}
+        <div className="w-full lg:w-1/3 space-y-4 text-center lg:text-left">
+          <h2 className="text-[#57462a] text-[20px] md:text-[24px] cursor-pointer">
+            Online Services & Forms ▾
+          </h2>
+          <h2 className="text-[#57462a] text-[20px] md:text-[24px] cursor-pointer">
+            Popular Information ▾
+          </h2>
+          <h2 className="text-[#57462a] text-[20px] md:text-[24px] cursor-pointer">
+            What’s New? ▾
+          </h2>
         </div>
 
-        {/* Card Grid */}
-        <div className="w-3/4 grid grid-cols-3 gap-6">
+        {/* Cards */}
+        <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {cards.map((card, index) => (
             <div
               key={index}
               className={`rounded-xl overflow-hidden shadow-md relative group ${
-                index === 7 ? "col-span-1 row-span-2" : ""
+                index === 7 ? "row-span-1 md:row-span-2" : ""
               }`}
             >
               <Image

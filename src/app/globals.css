@@ -25,3 +25,10 @@ body {
   color: var(--foreground);
   font-family: "Khand", Arial, sans-serif;
 }
+
+.goog-te-gadget img {
+  display: none !important;
+}
+body > .skiptranslate {
+  display: none;
+}

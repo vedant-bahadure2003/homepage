@@ -4,7 +4,7 @@ import React from "react";
 const Kumbh = () => {
   return (
     <>
-      <div className="w-full min-h-screen bg-white flex  justify-center ">
+      <div className="w-full lg:min-h-screen bg-white flex  justify-center ">
         <Image
           src="/kumbh-2027.svg"
           alt="Kumbh"

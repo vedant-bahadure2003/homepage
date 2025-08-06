@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FaChevronDown, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import LanguageSelector from "./LanguageSelector";
 
 const menuItems = [
   { label: "Home", link: "/" },
@@ -41,7 +42,7 @@ const NavBar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Image
-            src="/Nashik-Police-logo.webp"
+            src="/nashik-police-logoo-modified.png"
             alt="Nashik Police"
             width={50}
             height={50}
@@ -64,7 +65,7 @@ const NavBar = () => {
           {menuItems.map((item) => (
             <div key={item.label} className="relative group">
               {item.dropdown ? (
-                <div className="flex items-center gap-1 text-gray-700 hover:text-blue-800 cursor-pointer">
+                <div className="flex items-center gap-1 text-gray-700 hover:text-[#988e63] cursor-pointer">
                   <span>{item.label}</span>
                   <FaChevronDown className="w-3 h-3 mt-[2px] transform transition-transform duration-200 group-hover:rotate-180" />
                 </div>
@@ -73,8 +74,8 @@ const NavBar = () => {
                   href={item.link}
                   className={`${
                     item.label === "Home"
-                      ? "text-blue-800 border-b-2 border-blue-800"
-                      : "text-gray-700 hover:text-blue-800"
+                      ? "text-[#988e63] border-b-2 border-[#988e63]"
+                      : "text-gray-700 hover:text-[#988e63]"
                   }`}
                 >
                   {item.label}
@@ -100,11 +101,14 @@ const NavBar = () => {
 
         {/* Right Side - Language + Phone */}
         <div className="hidden md:flex items-center gap-4">
-          <span className="text-gray-700">English</span>
+          <span className="text-gray-700 cursor-pointer ">
+            {" "}
+            <LanguageSelector />
+          </span>
           <div className="relative group">
             <div className="flex items-center gap-3 bg-gray-200 rounded-full p-1 cursor-pointer">
-              <FaPhoneAlt className="text-white bg-[#0A1C74] rounded-full p-1 w-8 h-8" />
-              <FaChevronDown className="w-3 h-3 mt-[2px] text-[#0A1C74] transform transition-transform duration-200 group-hover:rotate-180" />
+              <FaPhoneAlt className="text-white bg-[#988e63] rounded-full p-1 w-8 h-8" />
+              <FaChevronDown className="w-3 h-3 mt-[2px] text-[#988e63] transform transition-transform duration-200 group-hover:rotate-180" />
             </div>
             <div className="absolute right-0 mt-2 w-56 bg-white border rounded-md shadow-md z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200">
               {helplineItems.map((item, index) => (
@@ -137,7 +141,7 @@ const NavBar = () => {
                       {item.dropdown.map((subItem) => (
                         <div
                           key={subItem}
-                          className="text-sm text-gray-600 hover:text-blue-800 cursor-pointer"
+                          className="text-sm text-gray-600 hover:text-[#988e63] cursor-pointer"
                         >
                           {subItem}
                         </div>
@@ -156,7 +160,7 @@ const NavBar = () => {
                   {helplineItems.map((item) => (
                     <div
                       key={item.label}
-                      className="text-sm text-gray-600 hover:text-blue-800"
+                      className="text-sm text-gray-600 hover:text-[#988e63]"
                     >
                       {item.label}: {item.number}
                     </div>
