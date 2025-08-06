@@ -7,9 +7,9 @@ import { BsCalendar2Date } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-12 border-t border-gray-200 text-[#1c1c1c] font-[500] font-sans">
+    <footer className="bg-white pt-12 border-t border-gray-200 text-[#1c1c1c] ">
       {/* Top Logos */}
-      <div className="flex justify-center flex-wrap gap-10 px-4">
+      <div className="flex justify-center flex-wrap gap-6 md:gap-10 px-4">
         {[
           "image1.webp",
           "image2.webp",
@@ -33,15 +33,17 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="w-[70%] mx-auto mt-14">
+      <div className="w-[90%] md:w-[70%] mx-auto mt-14">
         <h2 className="text-[#57462a] text-[24px] font-semibold ">
           Nashik City Police
         </h2>
-        <div className=" mx-auto mt-12 grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+        <div className=" mx-auto mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 text-sm">
           {/* Column 1 */}
           <div>
-            <h3 className="text-xl font-bold mb-4">General Information</h3>
-            <ul className="space-y-2">
+            <h3 className="text-[20px] font-medium mb-4">
+              General Information
+            </h3>
+            <ul className="space-y-2 text-gray-500 text-[14px] ">
               <li>
                 <Link href="#">Press Releases</Link>
               </li>
@@ -65,8 +67,8 @@ const Footer = () => {
 
           {/* Column 2 */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Citizen Guidance</h3>
-            <ul className="space-y-2">
+            <h3 className="text-[20px] font-medium mb-4">Citizen Guidance</h3>
+            <ul className="space-y-2 text-gray-500 text-[14px]">
               <li>
                 <Link href="#">Safety Tips</Link>
               </li>
@@ -90,8 +92,8 @@ const Footer = () => {
 
           {/* Column 3 */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-[20px] font-medium mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-gray-500 text-[14px]">
               <li>
                 <Link href="#">Tenders</Link>
               </li>
@@ -106,16 +108,42 @@ const Footer = () => {
 
           {/* Column 4 */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
+            <h3 className="text-[20px] font-medium mb-4">
               Important Emergency Contacts
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-gray-500 text-[14px]">
               <li>Women Helpline: 1091</li>
               <li>Control Room: 100/112</li>
               <li>Senior Citizens: 1090</li>
               <li>Childline: 1098</li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="w-[70%] mx-auto mt-10 border-t border-gray-300 pt-6 pb-10 text-sm text-[#1c1c1c] flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>© 2025 Nashik City Police</p>
+        <div className="flex gap-6">
+          <Link href="#">Sitemap</Link>
+          <Link href="#">Disclaimer</Link>
+        </div>
+        <div className="flex gap-4 text-[#57462a] text-lg">
+          <Link href="#">
+            <Image src="/footer/twitter-x.png" alt="X" width={20} height={20} />
+          </Link>
+          <Link href="#">
+            <FaFacebookF />
+          </Link>
+          <Link href="#">
+            <FaInstagram />
+          </Link>
+        </div>
+        <div className="flex flex-col gap-4 items-center text-[#57462a] font-medium">
+          <span>Visitor Count : 450601</span>
+          <span className="flex items-center gap-1">
+            <BsCalendar2Date /> Page updated : 5 August 2025
+          </span>
         </div>
       </div>
 
@@ -129,32 +157,6 @@ const Footer = () => {
           <button className="bg-[#57462a] text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
             CARBON COMPLIANT
           </button>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="w-[70%] mx-auto mt-10 border-t border-gray-300 pt-6 pb-10 text-sm text-[#1c1c1c] flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>© 2025 Nashik City Police</p>
-        <div className="flex gap-6">
-          <Link href="#">Sitemap</Link>
-          <Link href="#">Disclaimer</Link>
-        </div>
-        <div className="flex gap-4 items-center text-[#57462a] font-medium">
-          <span>Visitor Count : 450601</span>
-          <span className="flex items-center gap-1">
-            <BsCalendar2Date /> Page updated : 5 August 2025
-          </span>
-        </div>
-        <div className="flex gap-4 text-[#57462a] text-lg">
-          <Link href="#">
-            <Image src="/footer/twitter-x.png" alt="X" width={20} height={20} />
-          </Link>
-          <Link href="#">
-            <FaFacebookF />
-          </Link>
-          <Link href="#">
-            <FaInstagram />
-          </Link>
         </div>
       </div>
     </footer>

@@ -73,12 +73,12 @@ const SocialMediaFeed = () => {
 
   return (
     <>
-      <div className="w-full flex justify-center p-10 bg-white min-h-[80vh] pt-16 ">
+      <div className="w-full flex justify-center p-3 md:p-10 bg-white min-h-[80vh] pt-16 ">
         <div className=" w-full lg:w-[75%]   ">
-          <h2 className="text-4xl text-black  mb-2">
+          <h2 className="text-[34px] text-black  mb-2">
             Social Media Feed & Updates
           </h2>
-          <p className="text-lg text-gray-900 mb-8">
+          <p className="text-[16px] text-gray-900 mb-8">
             Get the latest happenings and important updates from the official
             social media feed of the police department.
           </p>

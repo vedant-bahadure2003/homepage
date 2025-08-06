@@ -27,10 +27,10 @@ const cards = [
 const ComplaintSection = () => {
   return (
     <div className="bg-white w-full flex flex-col items-center px-4 md:px-6 lg:px-12 py-12">
-      <h1 className="text-[28px] md:text-[36px] lg:text-[48px] text-black mb-2 text-center">
+      <h1 className="text-[34px] md:text-[36px] lg:text-[48px] text-black mb-2 text-left lg:text-center">
         Complaint, Information & Security - At One Click
       </h1>
-      <p className="text-gray-800 max-w-xl text-center text-sm md:text-base mb-8">
+      <p className="text-gray-800 max-w-xl text-left lg:text-center text-[20px] md:text-base mb-8">
         They perform many important tasks for the safety and order of society.
         Their responsibilities span across various sectors.
       </p>
@@ -48,7 +48,7 @@ const ComplaintSection = () => {
       {/* Main Content: Sidebar + Cards */}
       <div className="flex flex-col lg:flex-row w-full max-w-6xl gap-8">
         {/* Sidebar */}
-        <div className="w-full lg:w-1/3 space-y-4 text-center lg:text-left">
+        <div className="w-full lg:w-1/3 space-y-4 text-center lg:text-left hidden md:block">
           <h2 className="text-[#57462a] text-[20px] md:text-[24px] cursor-pointer">
             Online Services & Forms ▾
           </h2>
@@ -61,7 +61,7 @@ const ComplaintSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="w-full lg:w-3/4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -85,6 +85,22 @@ const ComplaintSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Sidebar */}
+        <div
+          className="w-full lg:w-1/3 space-y-4 text-left block md:hidden
+"
+        >
+          <h2 className="text-[#57462a] text-[20px] md:text-[24px] cursor-pointer">
+            Online Services & Forms ▾
+          </h2>
+          <h2 className="text-[#57462a] text-[20px] md:text-[24px] cursor-pointer">
+            Popular Information ▾
+          </h2>
+          <h2 className="text-[#57462a] text-[20px] md:text-[24px] cursor-pointer">
+            What’s New? ▾
+          </h2>
         </div>
       </div>
     </div>

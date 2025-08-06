@@ -10,7 +10,7 @@ const Kumbh = () => {
           alt="Kumbh"
           width={900}
           height={900}
-          className=" h-full w-[80%]"
+          className=" h-full md:w-[80%]"
         />
       </div>
     </>

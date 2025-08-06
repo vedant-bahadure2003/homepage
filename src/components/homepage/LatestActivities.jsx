@@ -51,13 +51,13 @@ const LatestActivities = () => {
       <div className=" max-w-5xl ">
         {/* Header */}
         <div className=" mb-10">
-          <h2 className="text-[40px] mb-2">Latest Activities</h2>
-          <p className="text-[18px] text-gray-200 max-w-xl">
+          <h2 className="text-[34px] md:text-[40px] mb-2">Latest Activities</h2>
+          <p className=" text-[16px] md:text-[18px] text-gray-200 max-w-xl">
             Stay updated with the latest events and enthusiastic developments in
             the police force.
           </p>
         </div>{" "}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+        <div className="columns-2 lg:columns-3 gap-4">
           {activities.map((activity, index) => (
             <div
               key={index}
@@ -68,7 +68,7 @@ const LatestActivities = () => {
                 alt={activity.caption}
                 className="w-full h-auto object-cover"
               />
-              <p className="text-[14px] text-white px-2 py-1">
+              <p className="text-[12px] md:text-[14px] text-white px-2 py-1">
                 {activity.caption}
               </p>
             </div>

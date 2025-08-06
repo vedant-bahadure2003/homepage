@@ -45,8 +45,8 @@ const WhatsAppDashboard = () => {
       <div className="w-full h-auto lg:h-[100vh] flex flex-col lg:flex-row justify-center items-center lg:gap-4 gap-6 bg-white rounded-xl  overflow-hidden">
         {/* Left Section */}
         <div className="w-full lg:w-1/4 flex flex-col justify-center gap-4 px-2 lg:h-[75vh]">
-          <div className="bg-[#57462a] p-6 rounded-2xl">
-            <h1 className="text-[32px] lg:text-[50px] text-white">
+          <div className="bg-[#57462a] px-4 rounded-2xl">
+            <h1 className="text-[48px] lg:text-[50px] text-white">
               <span className="text-[18px] lg:text-[24px]">
                 Total WhatsApp Messages
               </span>
@@ -55,19 +55,21 @@ const WhatsAppDashboard = () => {
           </div>
 
           <div className="p-4 bg-gray-100 rounded-2xl">
-            <h2 className="text-[18px] lg:text-[20px] font-semibold text-gray-700 mb-4">
+            <h2 className="text-[20px] font-semibold text-gray-700 mb-4">
               Important Messages
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
               {messageData.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between bg-gray-50 rounded-lg px-2"
+                  className="flex items-center justify-between bg-gray-100 rounded-lg px-2"
                 >
-                  <span className="text-gray-500 text-[16px]">
+                  <span className="text-gray-500  text-[20px]">
                     {item.label}
                   </span>
-                  <span className="text-lg text-gray-800">{item.value}</span>
+                  <span className="text-[20px] text-gray-800">
+                    {item.value}
+                  </span>
                 </div>
               ))}
             </div>

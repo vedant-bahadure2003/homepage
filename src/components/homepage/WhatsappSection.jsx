@@ -15,17 +15,15 @@ const WhatsappSection = () => {
       }}
     >
       {/* Top Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between w-[90%] md:w-[80%] border-b border-gray-600 pb-12">
-        <div className="text-center md:text-left">
-          <h1 className="lg:text-[48px] text-[24px]">
+      <div className="flex flex-col md:flex-row md:items-center justify-between w-[90%] md:w-[80%] border-b border-gray-600 pb-4 mt-8">
+        <div className="text-left">
+          <h1 className="lg:text-[48px] text-[34px]">
             Click HERE to send your suggestions
           </h1>
-          <p className="lg:text-[48px] text-[24px] mt-4">
-            on CP WhatsApp Number
-          </p>
+          <p className="lg:text-[48px] text-[34px] ">on CP WhatsApp Number</p>
         </div>
 
-        <div className="flex items-center mt-6 md:mt-0">
+        <div className="flex items-center  mt-2 md:mt-0">
           <Image
             src="/WhatsApp.svg.webp"
             alt="WhatsApp"
@@ -33,17 +31,17 @@ const WhatsappSection = () => {
             height={50}
             className="mr-4"
           />
-          <span className="lg:text-[48px] text-[24px] ">9923323311</span>
+          <span className="lg:text-[48px] text-[34px] ">9923323311</span>
         </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between w-[90%] md:w-[80%] pt-12">
-        <h2 className="lg:text-[48px] text-[24px] mb-8 md:mb-0">
+      <div className="flex flex-col md:flex-row md:items-center justify-between w-[90%] md:w-[80%] pt-12 mb-8">
+        <h2 className="lg:text-[48px] text-[34px] mb-8 md:mb-0">
           Scan to Follow our WhatsApp Channel
         </h2>
 
-        <div className="flex justify-center">
+        <div className="flex md:justify-center w-36 h-36 md:w-52 md:h-52 ">
           <Image
             src="/whatsapp-channel-qr.webp"
             alt="Nashik Police QR Code"
