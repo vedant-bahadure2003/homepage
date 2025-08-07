@@ -31,7 +31,9 @@ const Homepage = () => {
               </div>
               <div className="w-full">
                 <h1 className="text-[34px] md:text-[64px] mb-2">
-                  Nashik City <br className="hidden md:block" /> Police
+                  Nashik City
+                  {/* <br className="hidden md:block" />  */}
+                  Police
                 </h1>
                 <p className="text-[26px] md:text-[48px] mb-2">
                   Shaasak Nahi, Sevak.
