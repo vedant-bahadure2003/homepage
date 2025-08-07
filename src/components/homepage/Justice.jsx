@@ -3,7 +3,7 @@ import React from "react";
 
 const JusticeHelpSecurityDashboard = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-6 lg:p-8">
+    <div className="min-h-screen pt-10 md:pt-0 bg-gray-50 p-4 md:p-6 lg:p-8">
       {/* Header */}
       <div className="text-center mb-6 md:mb-8">
         <h1 className="text-[34px] md:text-[36px] lg:text-[48px] text-gray-900 mb-4">
@@ -18,7 +18,7 @@ const JusticeHelpSecurityDashboard = () => {
 
       {/* Main Content Grid */}
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-8 mb-8">
+        <div className="flex flex-col lg:flex-row justify-center md:h-[25vh] gap-6 lg:gap-8 mb-8">
           {/* Left Side - Dial 112 */}
           <div className="flex  lg:flex-row bg-white rounded-lg gap-2 md:gap-4 shadow-sm items-center px-4 py-6 md:py-4 w-full lg:w-1/2">
             <div className="text-[34px] md:text-[60px] lg:text-[85px] font-medium text-[#57462a] text-center lg:text-left">
@@ -31,7 +31,7 @@ const JusticeHelpSecurityDashboard = () => {
 
           {/* Right Side - 100% Resolved */}
           <div
-            className="bg-[#57462a] rounded-2xl px-4 py-6 md:p-8 text-white w-full lg:w-1/2"
+            className="bg-[#57462a] rounded-2xl px-4 py-6  md:p-8 text-white w-full lg:w-3/4"
             style={{
               backgroundImage:
                 "linear-gradient(rgba(87, 70, 42, 0.7), rgba(87, 70, 42, 0.7)), url('/Geometric-Low-Poly.png')",
@@ -40,7 +40,7 @@ const JusticeHelpSecurityDashboard = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="flex  lg:flex-row items-center lg:items-start justify-between gap-4">
+            <div className="flex  lg:flex-row items-center  justify-between gap-4">
               <p className="text-[16px] md:text-[20px] lg:text-[24px] text-left">
                 PG Portal, Aapla Sarkar Portal, Visitor Meetings, and Democracy
                 Day Complaints

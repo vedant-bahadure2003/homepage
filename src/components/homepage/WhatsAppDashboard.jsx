@@ -45,8 +45,8 @@ const WhatsAppDashboard = () => {
       <div className="w-full h-auto lg:h-[100vh] flex flex-col lg:flex-row justify-center items-center lg:gap-4 gap-6 bg-white rounded-xl  overflow-hidden">
         {/* Left Section */}
         <div className="w-full lg:w-1/4 flex flex-col justify-center gap-4 px-2 lg:h-[75vh]">
-          <div className="bg-[#57462a] px-4 rounded-2xl">
-            <h1 className="text-[48px] lg:text-[50px] text-white">
+          <div className="bg-[#57462a] px-4  rounded-2xl">
+            <h1 className="text-[48px] lg:text-[86px] text-white">
               <span className="text-[18px] lg:text-[24px]">
                 Total WhatsApp Messages
               </span>

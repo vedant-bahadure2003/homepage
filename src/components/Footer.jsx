@@ -7,7 +7,7 @@ import { BsCalendar2Date } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="bg-white pt-12 border-t border-gray-200 text-[#1c1c1c] ">
+    <footer className="bg-white pt-12 pb-3 border-t border-gray-200 text-[#1c1c1c] ">
       {/* Top Logos */}
       <div className="flex justify-center flex-wrap gap-6 md:gap-10 px-4">
         {[
@@ -151,10 +151,10 @@ const Footer = () => {
       <div className="w-[70%] mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-xl text-gray-400">New Identity, New Presence</p>
         <div className="flex gap-4">
-          <button className="bg-[#57462a] text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
+          <button className="bg-[#57462a] text-white px-4 py-1 rounded-full text-xs font-semibold hover:opacity-90">
             ACCESSIBILITY COMPLIANT
           </button>
-          <button className="bg-[#57462a] text-white px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90">
+          <button className="bg-[#57462a] text-white px-4 py-1 rounded-full text-xs font-semibold hover:opacity-90">
             CARBON COMPLIANT
           </button>
         </div>

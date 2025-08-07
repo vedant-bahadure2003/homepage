@@ -6,7 +6,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const CommissionerMessage = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-6">
+    <div className="flex justify-center pt-10 md:pt-0 items-center min-h-screen bg-gray-100 px-6">
       <div className="flex flex-col md:flex-row items-start md:justify-between  w-full max-w-7xl  lg:p-8 ">
         {/* Image Section */}
         <h2 className="text-[34px] lg:text-[48px] text-gray-900 mb-6  w-full  block md:hidden">

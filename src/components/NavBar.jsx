@@ -35,6 +35,23 @@ const helplineItems = [
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [isHelplineOpen, setIsHelplineOpen] = useState(false);
+
+  const toggleDropdown = (itemLabel) => {
+    setOpenDropdown(openDropdown === itemLabel ? null : itemLabel);
+  };
+
+  const toggleHelpline = () => {
+    setIsHelplineOpen(!isHelplineOpen);
+  };
+
+  // Close mobile menu when clicking outside or on a link
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+    setOpenDropdown(null);
+    setIsHelplineOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full px-4 z-50">
@@ -50,8 +67,9 @@ const NavBar = () => {
           />
         </div>
 
-        {/* Hamburger Icon - Mobile */}
-        <div className="md:hidden">
+        {/* Mobile - Language Selector + Hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSelector />
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-[#0A1C74] text-xl focus:outline-none"
@@ -82,7 +100,7 @@ const NavBar = () => {
                 </Link>
               )}
 
-              {/* Dropdown */}
+              {/* Desktop Dropdown */}
               {item.dropdown && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white border rounded-md shadow-md z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200">
                   {item.dropdown.map((subItem) => (
@@ -99,10 +117,9 @@ const NavBar = () => {
           ))}
         </div>
 
-        {/* Right Side - Language + Phone */}
+        {/* Desktop Right Side - Language + Phone */}
         <div className="hidden md:flex items-center gap-4">
-          <span className="text-gray-700 cursor-pointer ">
-            {" "}
+          <span className="text-gray-700 cursor-pointer">
             <LanguageSelector />
           </span>
           <div className="relative group">
@@ -130,42 +147,77 @@ const NavBar = () => {
         {/* Mobile Dropdown Menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white rounded-b-[15px] shadow-lg p-4 z-40">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {menuItems.map((item) => (
                 <div key={item.label}>
-                  <div className="text-gray-700 font-medium mb-1">
-                    {item.label}
-                  </div>
-                  {item.dropdown && (
-                    <div className="ml-4 space-y-1">
-                      {item.dropdown.map((subItem) => (
-                        <div
-                          key={subItem}
-                          className="text-sm text-gray-600 hover:text-[#988e63] cursor-pointer"
-                        >
-                          {subItem}
+                  {item.dropdown ? (
+                    <div>
+                      <div
+                        className="flex items-center justify-between text-gray-700 font-medium cursor-pointer py-2"
+                        onClick={() => toggleDropdown(item.label)}
+                      >
+                        <span>{item.label}</span>
+                        <FaChevronDown
+                          className={`w-3 h-3 transform transition-transform duration-200 ${
+                            openDropdown === item.label ? "rotate-180" : ""
+                          }`}
+                        />
+                      </div>
+                      {openDropdown === item.label && (
+                        <div className="ml-4 space-y-2 pb-2">
+                          {item.dropdown.map((subItem) => (
+                            <div
+                              key={subItem}
+                              className="text-sm text-gray-600 hover:text-[#988e63] cursor-pointer py-1"
+                              onClick={closeMobileMenu}
+                            >
+                              {subItem}
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      )}
                     </div>
+                  ) : (
+                    <Link
+                      href={item.link}
+                      className={`block py-2 ${
+                        item.label === "Home"
+                          ? "text-[#988e63] font-medium"
+                          : "text-gray-700 hover:text-[#988e63]"
+                      }`}
+                      onClick={closeMobileMenu}
+                    >
+                      {item.label}
+                    </Link>
                   )}
                 </div>
               ))}
 
               {/* Mobile Helpline Dropdown */}
-              <div className="mt-4">
-                <div className="font-medium text-gray-700 mb-2">
-                  Helpline Numbers
+              <div className="mt-2 border-t border-gray-200 pt-3">
+                <div
+                  className="flex items-center justify-between font-medium text-gray-700 cursor-pointer py-2"
+                  onClick={toggleHelpline}
+                >
+                  <span>Helpline Numbers</span>
+                  <FaChevronDown
+                    className={`w-3 h-3 transform transition-transform duration-200 ${
+                      isHelplineOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </div>
-                <div className="space-y-1 ml-2">
-                  {helplineItems.map((item) => (
-                    <div
-                      key={item.label}
-                      className="text-sm text-gray-600 hover:text-[#988e63]"
-                    >
-                      {item.label}: {item.number}
-                    </div>
-                  ))}
-                </div>
+                {isHelplineOpen && (
+                  <div className="space-y-2 ml-4 pb-2">
+                    {helplineItems.map((item) => (
+                      <div
+                        key={item.label}
+                        className="text-sm text-gray-600 hover:text-[#988e63] py-1"
+                      >
+                        {item.label}: {item.number}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>

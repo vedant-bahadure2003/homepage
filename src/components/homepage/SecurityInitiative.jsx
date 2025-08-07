@@ -32,12 +32,21 @@ const SecurityInitiative = () => {
       <section className=" flex flex-col md:flex-row bg-white items-start justify-center px-6 md:px-20 py-10 gap-4">
         {/* Left Section */}
         <div className="md:w-[35vw] space-y-6">
-          <h2 className="text-4xl md:text-5xl  text-[#1e1e1e]">
+          <h2 className="text-[34px] md:text-5xl  text-[#1e1e1e]">
             Security and Service Initiatives
           </h2>
 
           <div>
-            <h3 className="text-xl md:text-2xl font-semibold  text-[#1e1e1e] mb-4">
+            <div className="md:w-[35vw] w-full pb-4">
+              <Image
+                src="/conference.webp"
+                alt="Police training for AI/ML crowd control"
+                width={500}
+                height={400}
+                className=" w-full h-auto block md:hidden"
+              />
+            </div>
+            <h3 className="text-[16px] md:text-2xl font-semibold  text-[#1e1e1e] mb-4">
               1. Use of AI/ML for Crowd Control & Staff Training
             </h3>
 
@@ -58,7 +67,7 @@ const SecurityInitiative = () => {
             alt="Police training for AI/ML crowd control"
             width={500}
             height={400}
-            className=" w-full h-auto"
+            className=" w-full h-auto md:block hidden"
           />
         </div>
       </section>
@@ -75,10 +84,10 @@ const SecurityInitiative = () => {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-[#1e1e1e]">
+                <h3 className="text-[16px] font-bold text-[#1e1e1e]">
                   {item.title}
                 </h3>
-                <p className="text-gray-700 text-base leading-relaxed">
+                <p className="text-gray-700 text-[16px] leading-relaxed">
                   {item.description}
                 </p>
               </div>

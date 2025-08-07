@@ -52,7 +52,7 @@ const PoliceStationLocator = () => {
       </div>
 
       {/* Dropdowns */}
-      <div className="bg-[#F5F7FA] w-[90vw] mt-10 p-2 md:p-8 rounded-xl shadow-sm flex flex-col gap-4 ">
+      <div className="bg-[#F5F7FA] w-[90vw] md:w-[80vw] mt-10 p-2 md:p-8 rounded-xl shadow-sm flex flex-col gap-4 ">
         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
           {dropdownData.map((dropdown, index) => (
             <select
