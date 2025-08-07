@@ -6,7 +6,7 @@ const JusticeHelpSecurityDashboard = () => {
     <div className="min-h-screen pt-10 md:pt-0 bg-gray-50 p-4 md:p-6 lg:p-8">
       {/* Header */}
       <div className="text-center mb-6 md:mb-8">
-        <h1 className="text-[34px] md:text-[36px] lg:text-[48px] text-gray-900 mb-4">
+        <h1 className="text-[32px] md:text-[36px] lg:text-[48px] text-gray-900 mb-4">
           Justice, Help & Security
         </h1>
         <p className="text-gray-800 text-[16px] md:text-[18px] lg:text-[20px] max-w-lg mx-auto">

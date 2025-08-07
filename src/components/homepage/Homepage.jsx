@@ -19,7 +19,7 @@ const Homepage = () => {
         >
           {/* Left Section */}
           <div className="text-white w-full md:w-1/2 flex flex-col justify-between  items-center md:mt-14 mt-0 py-6 md:p-0">
-            <div className="flex flex-row-reverse lg:flex-col items-start ">
+            <div className="flex flex-row-reverse lg:flex-col items-start p-3 ">
               <div className="mb-6">
                 <Image
                   src="/nashik-police-logoo-modified.png"
@@ -30,12 +30,12 @@ const Homepage = () => {
                 />
               </div>
               <div className="w-full">
-                <h1 className="text-[34px] md:text-[64px] mb-2">
+                <h1 className="text-[32px] md:text-[64px] mb-2">
                   Nashik City
                   {/* <br className="hidden md:block" />  */}
                   Police
                 </h1>
-                <p className="text-[26px] md:text-[48px] mb-2">
+                <p className="text-[24px] md:text-[48px] mb-2">
                   Shaasak Nahi, Sevak.
                 </p>
                 <button className="bg-white text-[#57462a] font-semibold px-8 py-4 rounded-lg text-sm sm:text-base">
